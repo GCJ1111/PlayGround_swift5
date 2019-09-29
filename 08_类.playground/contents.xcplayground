@@ -3,6 +3,6 @@
     <pages>
         <page name='基础'/>
         <page name='构造方法1'/>
-        <page name='Untitled Page 2'/>
+        <page name='继承'/>
     </pages>
 </playground>
