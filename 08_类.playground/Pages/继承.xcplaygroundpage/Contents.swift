@@ -34,7 +34,7 @@ class Man {
     var age: Int = 23
     func sleep()
     {
-        print("睡觉")
+        print("父类方法:睡觉")
     }
 }
 //继承Man的子类
@@ -42,18 +42,18 @@ class SuperMan: Man {
     var power: Int = 100
     func fly() {
         //子类可以继承父类的属性
-        print("飞 \(name) \(age)")
+        print("子类方法:飞 \(name) \(age)")
     }
 }
-var m = Man()
-m.sleep()
+var fatherInsOfMan = Man()
+fatherInsOfMan.sleep()
 //父类不可以使用子类的方法
 //m.fly()
 
-var sm = SuperMan()
+var kidInsOfMan = SuperMan()
 //子类可以继承父类的方法
-sm.sleep()
-sm.fly()
+kidInsOfMan.sleep()
+kidInsOfMan.fly()
 
 print("==============================================")
 
@@ -68,7 +68,7 @@ class Man2  {
     var age: Int = 20
     func sleep()
     {
-        print("睡吧!")
+        print("父类方法:睡吧!")
     }
 }
 
@@ -76,12 +76,12 @@ class SuperMan2: Man2 {
     var power: Int = 100
     func eat()
     {
-        print("吃饭喽!")
+        print("子类方法:吃饭喽!")
     }
     func fly()
     {
         //子类可以继承父类的属性
-        print("飞 \(name) \(age)")
+        print("子类方法:飞 \(name) \(age)")
     }
     func eatAndSleep()
     {
@@ -91,8 +91,8 @@ class SuperMan2: Man2 {
         super.sleep()
     }
 }
-var sm2 = SuperMan2()
-sm2.eatAndSleep()
+var kidInsOfMan2 = SuperMan2()
+kidInsOfMan2.eatAndSleep()
 
 print("==============================================")
 
@@ -114,6 +114,7 @@ class SuperMan3: Man3 {
     
     //1.override关键字主要是为了明确表示重写父类方法;
     //2.所以如果要重写父类方法, 必须加上ovrride关键字.
+    // MARK: 方法重写: override
     override func sleep() {
 //        sleep()  // Error! 特别注意: 不能这样调用父类方法, 会导致递归!
         //正确姿势
@@ -134,10 +135,10 @@ class SuperMan3: Man3 {
         sleep()
     }
 }
-var sm3 = SuperMan3()
+var kidInsOfMan3 = SuperMan3()
 //通过子类调用, 优先调用子类重写的方法
 //sm3.sleep()
-sm3.eatAndSleep()
+kidInsOfMan3.eatAndSleep()
 
 print("==============================================")
 
@@ -163,7 +164,7 @@ class Man4 {
 }
 class SuperMan4: Man4 {
     var power: Int = 300
-    
+    var exp = 1000
     //1.可以将父类的存储属性重写为计算属性;
     //2.但不可以将父类的存储属性又重写为存储属性, 因为这样重写没有意义.
     override var name: String{
@@ -177,18 +178,30 @@ class SuperMan4: Man4 {
     //可以将父类的计算属性重写为计算属性, 同样不能重写为存储属性
     override var age: Int{ //计算属性
         get{
-            return 20
+            return exp/10
         }
         set{
-            print("SuprMan new age \(newValue)")
+            print("age is setting to: \(newValue)")
+            exp = newValue * 10
+            print("SuprMan new exp = age * 5 : \(exp)")
+            power = newValue
+            print("SuprMan new power = age : \(power)")
+
         }
     }
 }
 
-let sm4 = SuperMan4()
+let kidInsOfMan4 = SuperMan4()
 //通过子类对象来调用重写的属性或者方法, 肯定会调用子类中重写的版本
-sm4.name = "Hello!!!!"
-sm4.age = 60
+print(kidInsOfMan4.name)
+kidInsOfMan4.name = "Hello!!!!"
+print(kidInsOfMan4.name)
+
+print(kidInsOfMan4.age)
+kidInsOfMan4.age = 1000
+print("After setting , exp is : ",kidInsOfMan4.exp)
+print("After setting , age is : ",kidInsOfMan4.age)
+print("After setting , power is : ",kidInsOfMan4.power)
 
 print("==============================================")
 
