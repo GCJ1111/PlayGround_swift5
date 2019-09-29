@@ -20,6 +20,9 @@
       location = "group:06_&#x679a;&#x4e3e;.playground">
    </FileRef>
    <FileRef
+      location = "group:08_&#x7c7b;.playground">
+   </FileRef>
+   <FileRef
       location = "group:99_misc.playground">
    </FileRef>
 </Workspace>
