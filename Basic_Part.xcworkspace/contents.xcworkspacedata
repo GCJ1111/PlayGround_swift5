@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:01_&#x6570;&#x636e;&#x7c7b;&#x578b;.playground">
+   </FileRef>
+   <FileRef
+      location = "group:02_&#x6570;&#x636e;&#x7ed3;&#x6784;.playground">
+   </FileRef>
+   <FileRef
+      location = "group:03_&#x51fd;&#x6570;.playground">
+   </FileRef>
+   <FileRef
+      location = "group:04_&#x53ef;&#x9009;&#x503c;.playground">
+   </FileRef>
+   <FileRef
+      location = "group:05_&#x7c7b;&#x548c;&#x7ed3;&#x6784;&#x4f53;.playground">
+   </FileRef>
+   <FileRef
+      location = "group:06_&#x679a;&#x4e3e;.playground">
+   </FileRef>
+   <FileRef
+      location = "group:99_misc.playground">
+   </FileRef>
+</Workspace>

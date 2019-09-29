@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='macos'>
+    <pages>
+        <page name='类与结构体的对比'/>
+        <page name='方法对比'/>
+        <page name='结构体基本'/>
+        <page name='结构体的值类型定义'/>
+        <page name='方法和self'/>
+        <page name='结构体可选值'/>
+        <page name='结构体属性可选值'/>
+    </pages>
+</playground>
